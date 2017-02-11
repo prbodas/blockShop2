@@ -60,7 +60,7 @@ class SellerViewController: UIViewController {
         dinexPrice.text = "Dinex Price";
         dinexPrice.font = Style.regFontHeader;
         dinexPrice.textAlignment = NSTextAlignment.center;
-        dinexPrice.keyboardType = UIKeyboardType.numberPad;
+        dinexPrice.keyboardType = UIKeyboardType.decimalPad;
         self.view.addSubview(dinexPrice);
         
         //blockPrice field
@@ -70,7 +70,7 @@ class SellerViewController: UIViewController {
         blockPrice.text = "Block Price";
         blockPrice.font = Style.regFontHeader;
         blockPrice.textAlignment = NSTextAlignment.center;
-        blockPrice.keyboardType = UIKeyboardType.numberPad;
+        blockPrice.keyboardType = UIKeyboardType.decimalPad;
         self.view.addSubview(blockPrice);
         
         
