@@ -8,13 +8,21 @@
 
 import UIKit
 //import Style
+import Alamofire
+import CoreLocation
 
-class SellerViewController: UIViewController {
+
+class SellerViewController: UIViewController,CLLocationManagerDelegate {
     
     let nowSelling:UIButton = UIButton.init();
-    
+    let blockPrice:UITextField = UITextField.init()
+    let dinexPrice:UITextField = UITextField.init()
+    var locationManager: CLLocationManager!
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.red;
         
@@ -54,7 +62,6 @@ class SellerViewController: UIViewController {
         
         
         //dinexPrice field
-        let dinexPrice:UITextField = UITextField.init();
         dinexPrice.backgroundColor = UIColor.white;
         dinexPrice.textColor = UIColor.black;
         dinexPrice.text = "Dinex Price";
@@ -64,7 +71,6 @@ class SellerViewController: UIViewController {
         self.view.addSubview(dinexPrice);
         
         //blockPrice field
-        let blockPrice:UITextField = UITextField.init();
         blockPrice.backgroundColor = UIColor.white;
         blockPrice.textColor = UIColor.black;
         blockPrice.text = "Block Price";
@@ -136,7 +142,20 @@ class SellerViewController: UIViewController {
     }
     
     func onNowSelling(){
-        print("lmao");
+        let latitude = locationManager.location!.coordinate.latitude
+        let longitude = locationManager.location!.coordinate.longitude
+        
+        let parameters: Parameters = [
+        "userid": AppDelegate.userid,
+        "has_block": true,
+        "block_price": blockPrice.text!,
+        "dinex_price": dinexPrice.text!,
+        "dinex_amount": "100",
+        "is_selling": true,
+        "lat": latitude,
+        "long": longitude
+        ]
+        Alamofire.request("https://blackshop-backend.herokuapp.com/api/add_seller", method: .post, parameters: parameters, encoding: JSONEncoding.default)
         self.navigationController?.popViewController(animated: true);
     }
     

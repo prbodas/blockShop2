@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
+
+
 //import Style
 
 class LoginViewController: UIViewController {
@@ -64,10 +68,36 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func onFbLogin(result: LoginResult) {
+        switch result {
+        case .failed(let error):
+            print(error)
+        case .cancelled:
+            print("User cancelled login.")
+        case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+            saveInfo()
+        }
+        
+    }
+    func saveInfo() {
+        let connection = GraphRequestConnection()
+        connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, first_name"])) { httpResponse, result in
+            switch result {
+            case .success(let response):
+                AppDelegate.first_name = response.dictionaryValue!["first_name"]! as! String
+                AppDelegate.userid = response.dictionaryValue!["id"] as! String
+                self.dismiss(animated: true, completion: nil)
+            case .failed(let error):
+                print("Graph Request Failed: \(error)")
+            }
+        }
+        connection.start()
+    }
+
     
     func onLogin(){
-        print("lmao");
-        self.dismiss(animated: true, completion: nil)
+        let loginManager = LoginManager()
+        loginManager.logIn([.publicProfile], viewController: self, completion: onFbLogin)
     }
     
     

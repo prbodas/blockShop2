@@ -70,6 +70,8 @@ class BuyerViewController: UIViewController,UITableViewDataSource,UITableViewDel
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 19;
     }

@@ -9,7 +9,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class SalesViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -22,10 +23,11 @@ class SalesViewController: UIViewController {
             self.present(v, animated: true, completion: nil);
         }
         
+        
         self.view.backgroundColor = UIColor.red;
         
         //block price label
-        let blockPrice:UILabel = UILabel.init();
+        var blockPrice:UILabel = UILabel.init();
         blockPrice.backgroundColor = UIColor.white;
         blockPrice.textColor = UIColor.black;
         blockPrice.text = "$5/block";
@@ -41,7 +43,13 @@ class SalesViewController: UIViewController {
         dinexPrice.font = Style.regFontHeader;
         dinexPrice.textAlignment = NSTextAlignment.center;
         self.view.addSubview(dinexPrice);
-        
+        Alamofire.request("https://blackshop-backend.herokuapp.com/api/market_data").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                dinexPrice.text = swiftyJsonVar[0]["avg_dinex_price"].number?.stringValue
+                blockPrice.text = swiftyJsonVar[0]["avg_block_price"].number?.stringValue
+            }
+        }
         //buyer button
         let buyerButton = UIButton.init();
         buyerButton.backgroundColor = Style.colors["blue"];
@@ -84,6 +92,7 @@ class SalesViewController: UIViewController {
         NSLayoutConstraint.init(item: sellerButton, attribute: NSLayoutAttribute.topMargin, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottomMargin, multiplier: 0.7, constant: 0.0).isActive = true;
         NSLayoutConstraint.init(item: sellerButton, attribute: NSLayoutAttribute.bottomMargin, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottomMargin, multiplier: 0.75, constant: 0.0).isActive = true;
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

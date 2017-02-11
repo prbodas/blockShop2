@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126267A746181036DEF08331 /* Pods_BlockShop2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C138D0A965BFB7C2D33777 /* Pods_BlockShop2.framework */; };
 		37234C791E4EDA3E00092188 /* SalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C781E4EDA3E00092188 /* SalesViewController.swift */; };
 		37234C7B1E4EE97200092188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C7A1E4EE97200092188 /* LoginViewController.swift */; };
 		37234C7D1E4EED3100092188 /* BuyerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C7C1E4EED3100092188 /* BuyerViewController.swift */; };
@@ -61,6 +62,9 @@
 		37B891A71E4EC0FC005320A9 /* BlockShop2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockShop2UITests.swift; sourceTree = "<group>"; };
 		37B891A91E4EC0FC005320A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B891B51E4ECB7B005320A9 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		98C138D0A965BFB7C2D33777 /* Pods_BlockShop2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockShop2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7D51F8A017B4AF814C72A2A /* Pods-BlockShop2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockShop2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockShop2/Pods-BlockShop2.debug.xcconfig"; sourceTree = "<group>"; };
+		FA2C9889269569B76BFD1FB1 /* Pods-BlockShop2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockShop2.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlockShop2/Pods-BlockShop2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37234C821E4F026A00092188 /* MapKit.framework in Frameworks */,
+				126267A746181036DEF08331 /* Pods_BlockShop2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				37234C811E4F026A00092188 /* MapKit.framework */,
+				98C138D0A965BFB7C2D33777 /* Pods_BlockShop2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,6 +111,7 @@
 				37B891A61E4EC0FC005320A9 /* BlockShop2UITests */,
 				37B891851E4EC0FC005320A9 /* Products */,
 				37234C801E4F026A00092188 /* Frameworks */,
+				CC9B703EBD39885CAA638D21 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +162,15 @@
 			path = BlockShop2UITests;
 			sourceTree = "<group>";
 		};
+		CC9B703EBD39885CAA638D21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7D51F8A017B4AF814C72A2A /* Pods-BlockShop2.debug.xcconfig */,
+				FA2C9889269569B76BFD1FB1 /* Pods-BlockShop2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37B891AC1E4EC0FC005320A9 /* Build configuration list for PBXNativeTarget "BlockShop2" */;
 			buildPhases = (
+				452BB9823F9B264DE2364646 /* [CP] Check Pods Manifest.lock */,
 				37B891801E4EC0FC005320A9 /* Sources */,
 				37B891811E4EC0FC005320A9 /* Frameworks */,
 				37B891821E4EC0FC005320A9 /* Resources */,
+				C706B47E5E66252D5FF5184D /* [CP] Embed Pods Frameworks */,
+				BC527062368D6486B9E2988D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,7 +242,7 @@
 				TargetAttributes = {
 					37B891831E4EC0FC005320A9 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4S377L838K;
+						DevelopmentTeam = NETM7TTFF5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -289,6 +308,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		452BB9823F9B264DE2364646 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC527062368D6486B9E2988D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlockShop2/Pods-BlockShop2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C706B47E5E66252D5FF5184D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlockShop2/Pods-BlockShop2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37B891801E4EC0FC005320A9 /* Sources */ = {
@@ -452,13 +519,19 @@
 		};
 		37B891AD1E4EC0FC005320A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D51F8A017B4AF814C72A2A /* Pods-BlockShop2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4S377L838K;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NETM7TTFF5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BlockShop2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = noodleheads.BlockShop2;
+				PRODUCT_BUNDLE_IDENTIFIER = noodleheads.BlockShop24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -466,13 +539,19 @@
 		};
 		37B891AE1E4EC0FC005320A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA2C9889269569B76BFD1FB1 /* Pods-BlockShop2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4S377L838K;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NETM7TTFF5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BlockShop2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = noodleheads.BlockShop2;
+				PRODUCT_BUNDLE_IDENTIFIER = noodleheads.BlockShop24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

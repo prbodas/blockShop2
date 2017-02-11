@@ -1,0 +1,6 @@
+framework module Pods_BlockShop2 {
+  umbrella header "Pods-BlockShop2-umbrella.h"
+
+  export *
+  module * { export * }
+}
