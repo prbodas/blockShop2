@@ -10,7 +10,8 @@
 import UIKit
 import MapKit
 import CoreLocation
-
+import Alamofire
+import SwiftyJSON
 class BuyerViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate,CLLocationManagerDelegate {
     
     let tableView = UITableView()
@@ -62,6 +63,7 @@ class BuyerViewController: UIViewController,UITableViewDataSource,UITableViewDel
         NSLayoutConstraint(item: tableView, attribute: .rightMargin, relatedBy: .equal, toItem: view, attribute: .rightMargin, multiplier: 1.0, constant: 0.0).isActive = true;
         NSLayoutConstraint(item: tableView, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1.0, constant: 0.0).isActive = true;
         NSLayoutConstraint(item: tableView, attribute: .topMargin, relatedBy: .equal, toItem: mapView, attribute: .bottomMargin, multiplier: 1.0, constant: 0.0).isActive = true;
+        setSellers()
         
     }
     
@@ -74,6 +76,21 @@ class BuyerViewController: UIViewController,UITableViewDataSource,UITableViewDel
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 19;
+    }
+    
+    func setSellers() {
+        Alamofire.request("https://blackshop-backend.herokuapp.com/api/get_sellers").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                let sellers = swiftyJsonVar["sellers"]
+                let names = sellers.map({$0.1["first_name"]})
+                let block_prices = sellers.map({$0.1["block_price"]})
+                let dinex_prices = sellers.map({$0.1["dinex_price"]})
+                let messenger_usernames = sellers.map({$0.1["messenger_username"]})
+                print(names, block_prices, dinex_prices, messenger_usernames)
+                print(swiftyJsonVar["sellers"])
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{

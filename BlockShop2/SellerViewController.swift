@@ -152,6 +152,7 @@ class SellerViewController: UIViewController,CLLocationManagerDelegate {
         "dinex_price": dinexPrice.text!,
         "dinex_amount": "100",
         "is_selling": true,
+        "first_name": AppDelegate.first_name,
         "lat": latitude,
         "long": longitude
         ]
