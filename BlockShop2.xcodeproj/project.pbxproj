@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37234C791E4EDA3E00092188 /* SalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C781E4EDA3E00092188 /* SalesViewController.swift */; };
+		37234C7B1E4EE97200092188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C7A1E4EE97200092188 /* LoginViewController.swift */; };
+		37234C7D1E4EED3100092188 /* BuyerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C7C1E4EED3100092188 /* BuyerViewController.swift */; };
+		37234C7F1E4EF09A00092188 /* BuyerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C7E1E4EF09A00092188 /* BuyerCell.swift */; };
+		37234C821E4F026A00092188 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37234C811E4F026A00092188 /* MapKit.framework */; };
+		37234C841E4F052C00092188 /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37234C831E4F052C00092188 /* SellerViewController.swift */; };
 		37B891881E4EC0FC005320A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B891871E4EC0FC005320A9 /* AppDelegate.swift */; };
 		37B8918A1E4EC0FC005320A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B891891E4EC0FC005320A9 /* ViewController.swift */; };
 		37B8918D1E4EC0FC005320A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B8918B1E4EC0FC005320A9 /* Main.storyboard */; };
@@ -14,6 +20,7 @@
 		37B891921E4EC0FC005320A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B891901E4EC0FC005320A9 /* LaunchScreen.storyboard */; };
 		37B8919D1E4EC0FC005320A9 /* BlockShop2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8919C1E4EC0FC005320A9 /* BlockShop2Tests.swift */; };
 		37B891A81E4EC0FC005320A9 /* BlockShop2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B891A71E4EC0FC005320A9 /* BlockShop2UITests.swift */; };
+		37B891B61E4ECB7B005320A9 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B891B51E4ECB7B005320A9 /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37234C781E4EDA3E00092188 /* SalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesViewController.swift; sourceTree = "<group>"; };
+		37234C7A1E4EE97200092188 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37234C7C1E4EED3100092188 /* BuyerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerViewController.swift; sourceTree = "<group>"; };
+		37234C7E1E4EF09A00092188 /* BuyerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerCell.swift; sourceTree = "<group>"; };
+		37234C811E4F026A00092188 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37234C831E4F052C00092188 /* SellerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
 		37B891841E4EC0FC005320A9 /* BlockShop2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockShop2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B891871E4EC0FC005320A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B891891E4EC0FC005320A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,7 @@
 		37B891A31E4EC0FC005320A9 /* BlockShop2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockShop2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B891A71E4EC0FC005320A9 /* BlockShop2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockShop2UITests.swift; sourceTree = "<group>"; };
 		37B891A91E4EC0FC005320A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B891B51E4ECB7B005320A9 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37234C821E4F026A00092188 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37234C801E4F026A00092188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37234C811E4F026A00092188 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		37B8917B1E4EC0FC005320A9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +104,7 @@
 				37B8919B1E4EC0FC005320A9 /* BlockShop2Tests */,
 				37B891A61E4EC0FC005320A9 /* BlockShop2UITests */,
 				37B891851E4EC0FC005320A9 /* Products */,
+				37234C801E4F026A00092188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +123,12 @@
 			children = (
 				37B891871E4EC0FC005320A9 /* AppDelegate.swift */,
 				37B891891E4EC0FC005320A9 /* ViewController.swift */,
+				37234C7A1E4EE97200092188 /* LoginViewController.swift */,
+				37234C7C1E4EED3100092188 /* BuyerViewController.swift */,
+				37234C831E4F052C00092188 /* SellerViewController.swift */,
+				37234C7E1E4EF09A00092188 /* BuyerCell.swift */,
+				37234C781E4EDA3E00092188 /* SalesViewController.swift */,
+				37B891B51E4ECB7B005320A9 /* Style.swift */,
 				37B8918B1E4EC0FC005320A9 /* Main.storyboard */,
 				37B8918E1E4EC0FC005320A9 /* Assets.xcassets */,
 				37B891901E4EC0FC005320A9 /* LaunchScreen.storyboard */,
@@ -193,7 +223,13 @@
 				TargetAttributes = {
 					37B891831E4EC0FC005320A9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4S377L838K;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					37B891971E4EC0FC005320A9 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -259,8 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37234C7F1E4EF09A00092188 /* BuyerCell.swift in Sources */,
+				37234C7D1E4EED3100092188 /* BuyerViewController.swift in Sources */,
 				37B8918A1E4EC0FC005320A9 /* ViewController.swift in Sources */,
+				37234C841E4F052C00092188 /* SellerViewController.swift in Sources */,
+				37B891B61E4ECB7B005320A9 /* Style.swift in Sources */,
 				37B891881E4EC0FC005320A9 /* AppDelegate.swift in Sources */,
+				37234C7B1E4EE97200092188 /* LoginViewController.swift in Sources */,
+				37234C791E4EDA3E00092188 /* SalesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +454,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4S377L838K;
 				INFOPLIST_FILE = BlockShop2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noodleheads.BlockShop2;
@@ -424,6 +468,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4S377L838K;
 				INFOPLIST_FILE = BlockShop2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noodleheads.BlockShop2;
@@ -505,6 +551,7 @@
 				37B891AE1E4EC0FC005320A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37B891AF1E4EC0FC005320A9 /* Build configuration list for PBXNativeTarget "BlockShop2Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +560,7 @@
 				37B891B11E4EC0FC005320A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37B891B21E4EC0FC005320A9 /* Build configuration list for PBXNativeTarget "BlockShop2UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +569,7 @@
 				37B891B41E4EC0FC005320A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
